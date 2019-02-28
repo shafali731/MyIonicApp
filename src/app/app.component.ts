@@ -2,9 +2,16 @@ import { Component, ViewChild } from '@angular/core';
 
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
+//import all pages using their path z
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ListPage } from '../pages/list/list';
 import { CardPage } from '../pages/card/card';
+import { UserPage } from '../pages/user/user';
+import { ContactPage } from '../pages/contact/contact';
+import { RangePage } from '../pages/range/range';
+
+
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -32,7 +39,11 @@ export class MyApp {
     this.pages = [
       { title: 'Hello Ionic', component: HelloIonicPage },
       { title: 'My First List', component: ListPage },
-      { title: 'Cards', component: CardPage }
+      { title: 'Cards', component: CardPage },
+      { title: 'User', component: UserPage},
+      { title: 'Contact', component: ContactPage},
+      { title: 'Range', component: RangePage}
+
 
     ];
   }
