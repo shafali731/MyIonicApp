@@ -10,18 +10,23 @@ import { ItemDetailsPage } from '../item-details/item-details';
 })
 export class ListPage {
   icons: string[];
+  ti:string[]
   items: Array<{title: string, note: string, icon: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    'american-football', 'boat', 'bluetooth', 'build'];
+    this.ti = ['Class of 2019', 'Wifi', 'emails', 'how much time is left in class', 'pizza', 'distractions', 'football team',
+      'when they leave you on read', 'stress levels', 'what your mom sys you spend all your time on', 'when he hits you with that qaf post'];
+    this.icons = ['school', 'wifi', 'at', 'clock', 'pizza', 'paper-plane',
+    'american-football', 'done-all', 'trending-down', 'phone-portrait', 'pulse'];
 
     this.items = [];
-    for(let i = 1; i < 11; i++) {
+    for(let i = 0; i < 11; i++) {
       this.items.push({
-        title: 'Item ' + i,
+        title: this.ti[i],
+        //'Item ' + i,
         note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
+        icon: this.icons[i]
+        //[Math.floor(Math.random() * this.icons.length)]
       });
     }
   }

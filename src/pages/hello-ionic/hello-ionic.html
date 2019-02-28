@@ -4,33 +4,39 @@
       <ion-icon name="menu"></ion-icon>
     </button>
 
-    <ion-title>Hello Ionic</ion-title>
+    <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-  <ion-item>
-    <ion-label>checkbox1</ion-label>
-    <ion-checkbox color="dark" checked="true"></ion-checkbox>
-  </ion-item>
-  <ion-item>
-    <ion-label>checkbox2</ion-label>
-    <ion-checkbox color="dark" checked="true"></ion-checkbox>
-  </ion-item>  <ion-item>
-      <ion-label>checkbox2</ion-label>
-      <ion-checkbox color="dark" checked="true"></ion-checkbox>
-    </ion-item>
-  <h3>Welcome to your first Ionic app!</h3>
+  <h3>Welcome Devos!</h3>
 
   <p>
-    This starter project is our way of helping you get a functional app running in record time.
+    This is our demo for how to use the ionic framework.
   </p>
   <p>
-    Follow along on the tutorial section of the Ionic docs!
+    Enjoy!
   </p>
   <p>
     <button ion-button color="primary" menuToggle>Toggle Menu</button>
   </p>
+  <ion-item class = 'check'>
+    <ion-label>"Look back at your notes from intro"</ion-label>
+    <ion-checkbox color="dark" checked="true"></ion-checkbox>
+  </ion-item>
+  <ion-item class = 'check'>
+    <ion-label>"Days of relaxation"</ion-label>
+    <ion-checkbox color="dark" checked="true"></ion-checkbox>
+  </ion-item>
+  <ion-item class = 'check'>
+      <ion-label>"I smell a qaf post"</ion-label>
+      <ion-checkbox color="dark" checked="true"></ion-checkbox>
+    </ion-item>
 
+    <ion-card (tap)="tapEvent($event)">
+  <ion-item>
+    Tapped: {{tap}} times
+  </ion-item>
+</ion-card>
 </ion-content>
